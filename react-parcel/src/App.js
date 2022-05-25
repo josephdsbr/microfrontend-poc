@@ -1,7 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { listenEvent, } from '@jvm/utils';
 
 const App = ({ name }) => {
     const [tasks, updateTasks] = useState([]);
+
+    useEffect(() => {
+        listenEvent('@jvm/react-route/todo/add-task', event => {
+            updateTasks(oldTasks => [...oldTasks, event.detail])
+        })
+    }, [])
 
     return (
         <>

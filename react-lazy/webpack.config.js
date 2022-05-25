@@ -4,7 +4,7 @@ const singleSpaDefaults = require("webpack-config-single-spa-react");
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "jvm",
-    projectName: "react-multiples",
+    projectName: "react-lazy",
     webpackConfigEnv,
     argv,
   });

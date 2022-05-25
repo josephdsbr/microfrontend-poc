@@ -13,7 +13,8 @@
       "imports": {
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
         "react": "https://unpkg.com/react@17/umd/react.production.min.js",
-        "react-dom": "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
+        "react-dom": "https://unpkg.com/react-dom@17/umd/react-dom.production.min.js",
+        "react-router-dom": "https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.min.js"
       }
     }
   </script>
@@ -23,11 +24,15 @@
   <script type="systemjs-importmap">
     {
       "imports": {
+        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
         "@jvm/root-config": "//localhost:9000/jvm-root-config.js",
         "@jvm/react-single": "//localhost:8500/jvm-react-single.js",
         "@jvm/react-multiples": "//localhost:8500/jvm-react-multiples.js",
-        "@jvm/react-parcel": "//localhost:8500/jvm-react-parcel.js",
-        "@jvm/react-route": "//localhost:8500/jvm-react-route.js"
+        "@jvm/react-parcel": "//localhost:8501/jvm-react-parcel.js",
+        "@jvm/react-route": "//localhost:8500/jvm-react-route.js",
+        "@jvm/utils": "//localhost:8600/jvm-utils.js",
+        "@jvm/react-lazy": "//localhost:8888/jvm-react-lazy.js",
+        "@jvm/react-header": "//localhost:8700/jvm-react-header.js"
       }
     }
   </script>

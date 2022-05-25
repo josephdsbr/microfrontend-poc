@@ -3,9 +3,7 @@ import { registerApplication, start } from "single-spa";
 registerApplication({
   name: "@single-spa/welcome",
   app: () =>
-    System.import(
-      "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
-    ),
+    System.import("@single-spa/welcome"),
   activeWhen: (location) => location.pathname === '/',
 });
 
@@ -32,7 +30,20 @@ registerApplication({
   activeWhen: (location) => location.pathname === '/react-route',
 });
 
-registerApplication
+
+registerApplication({
+  name: "@jvm/react-lazy",
+  app: () =>
+    System.import("@jvm/react-lazy"),
+  activeWhen: ['/react-lazy'],
+});
+
+registerApplication({
+  name: '@jvm/react-header',
+  app: () =>
+    System.import("@jvm/react-header"),
+  activeWhen: ['/']
+})
 
 // registerApplication({
 //   name: "@jvm/navbar",
